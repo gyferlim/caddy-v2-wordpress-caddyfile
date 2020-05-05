@@ -30,4 +30,4 @@ f) in case you face file cannot run due to permsion:
 g) copy the file to bin so you can run it anywhere
     type > cp caddy /usr/local/bin
 
-Good Luck and have fun.
+Good Luck and have fun
