@@ -1,0 +1,25 @@
+#
+# Caddyfile for WordPress
+#
+
+your.domain.com {
+        root *  /folder/where/wordpress/is
+        log {
+             output file /var/log/caddy_log.log
+             }
+
+        log     /var/log/caddy_log.log
+
+        encode gzip
+        php_fastcgi 127.0.0.1:9000
+
+        # Prevent malicious PHP uploads from running
+        @uploads {
+          path_regexp path /uploads\/(.*)\.php
+        }
+        rewrite @uploads /
+
+        @wp-admin {
+          path  not ^\/wp-admin/*
+        }
+}
