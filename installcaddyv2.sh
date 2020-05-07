@@ -1,4 +1,4 @@
-#!/usr/local/bin/bash
+#!/bin/sh
 # To install latest Caddy v2 from officail Caddy Github
 # written for FreeNAS , tested on FreeNAS 11.2-U7 and 11.2-U8
 
